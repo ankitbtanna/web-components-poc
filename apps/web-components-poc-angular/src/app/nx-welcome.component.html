@@ -1,0 +1,33 @@
+<h1>Button Element</h1>
+<form [formGroup]="btnFormGroup">
+  <div>
+    <label>Button Text:</label>
+    <input type="text" formControlName="btnText" />
+  </div>
+
+  <div>
+    <label>Brand:</label>
+    <select (change)="onBrandChange()" formControlName="brand">
+      <option>BUDD</option>
+      <option>1FOW</option>
+      <option>VIRG</option>
+    </select>
+  </div>
+
+  <div>
+    <label>Disabled:</label>
+    <input type="checkbox" formControlName="btnDisabled" />
+  </div>
+</form>
+
+<ag-button
+  btnText="{{ btnFormGroup.controls.btnText.value }}"
+  btnDisabled="{{ btnFormGroup.controls.btnDisabled.value }}"
+  (buttonClicked)="onButtonClick($event)"
+></ag-button>
+
+<lit-ag-button
+  btnText="{{ btnFormGroup.controls.btnText.value || 'Next' }}"
+  btnDisabled="{{ btnFormGroup.controls.btnDisabled.value }}"
+  (buttonClicked)="onButtonClick($event)"
+></lit-ag-button>

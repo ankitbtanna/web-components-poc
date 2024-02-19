@@ -1,0 +1,19 @@
+{
+  "name": "button",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/button/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/button",
+        "main": "libs/button/src/index.ts",
+        "tsConfig": "libs/button/tsconfig.lib.json",
+        "assets": ["libs/button/*.md"]
+      }
+    }
+  },
+  "tags": []
+}

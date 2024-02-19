@@ -1,0 +1,31 @@
+:host {
+  display: block;
+}
+
+:host-context([btnState='true']) button {
+  background-color: var(--button-disabled-color);
+  border-color: var(--button-disabled-border-color);
+  color: var(--color-disabled);
+  cursor: not-allowed;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  outline: none;
+  background-color: var(--button-primary-color);
+  border: 1px solid transparent;
+  border-color: var(--button-primary-border-color);
+  color: var(--color-primary);
+  user-select: none;
+  font-size: 1.1rem;
+  padding: 0.375rem 0.75rem;
+  border-radius: var(
+    --button-border-radius,
+    var(--button-default-border-radius)
+  );
+  cursor: pointer;
+  height: 50px;
+  width: 100%;
+}

@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
 * {
   margin: 0;
   padding: 0;
@@ -15,6 +16,10 @@ body {
   --button-disabled-color: #b3b3b3;
   --button-disabled-border-color: #b3b3b3;
   --color-disabled: #000000;
+
+  --button-primary-color: #de0614;
+  --button-primary-border-color: #de0614;
+  --color-primary: #ffffff;
 }
 
 :root[theme='BUDD'] {
